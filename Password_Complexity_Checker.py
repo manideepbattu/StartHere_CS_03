@@ -11,7 +11,7 @@ def check_password_strength(password):
         feedback.append("Password should include at least one digit.")
     if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
         feedback.append("Password should include at least one special character.")
-
+        
     if not feedback:
         return "Strong password!", feedback
     elif len(feedback) <= 2:
